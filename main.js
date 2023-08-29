@@ -64,6 +64,23 @@ class ProductManager {
             return null;
         }
     }
+
+    deleteProduct(id) {
+        const index = this.products.findIndex(product => product.id === id);
+        if (index !== -1) {
+            const deletedProduct = this.products.splice(index, 1)[0];
+            this.saveProductsToFile('products.json');
+            fs.unlink(`thumbnails/${deletedProduct.thumbnail}`, (err) => {
+                if (err) {
+                    console.error("Error al eliminar la imagen:", err.message);
+                } else {
+                    console.log(`Producto con ID ${id} y su imagen eliminados exitosamente.`);
+                }
+            });
+        } else {
+            console.log(`Producto con ID ${id} no encontrado.`);
+        }
+    }
 }
 
 const productsManager = new ProductManager();
@@ -73,10 +90,10 @@ productsManager.loadProductsFromFile('products.json');
 const emptyProducts = productsManager.getProducts();
 console.log(emptyProducts);
 
-//prueba de agregar un cupcake con un codigo ya existente (dira que esta repetido)
+//al agregar un cupcake con un codigo ya existente (dira que esta repetido)
 productsManager.addProduct('Cupcake Vainilla', 'Rico cupcake sabor vainilla', 600, 'imagen1.jpg', 239, 15);
 
-//prueba de agregar un cupcake nuevo directamente al archivo JSON (aparecera con la ID 6)
+//se agregara un cupcake nuevo directamente al archivo JSON (aparecera con la ID 6)
 productsManager.addProduct('Cupcake nuevo', 'Descripcion nueva', 850, 'imagenRandomNueva.jpg', 384, 10);
 
 const allProducts = productsManager.getProducts();
@@ -87,3 +104,6 @@ console.log(productById);
 
 const nonExistentProduct = productsManager.getProductById(10);
 console.log(nonExistentProduct);
+
+//eliminara del JSON el cupcake de chocolate
+productsManager.deleteProduct(2);
