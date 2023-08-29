@@ -1,7 +1,28 @@
+const fs = require('fs');
+
 class ProductManager {
     constructor() {
         this.products = [];
         this.idCounter = 1;
+    }
+
+    loadProductsFromFile(filename) {
+        try {
+            const data = fs.readFileSync(filename, 'utf8');
+            this.products = JSON.parse(data);
+            this.idCounter = this.products.length > 0 ? this.products[this.products.length - 1].id + 1 : 1;
+        } catch (error) {
+            console.error("Error loading products from file:", error.message);
+        }
+    }
+
+    saveProductsToFile(filename) {
+        try {
+            fs.writeFileSync(filename, JSON.stringify(this.products, null, 2));
+            console.log("Products saved to file:", filename);
+        } catch (error) {
+            console.error("Error saving products to file:", error.message);
+        }
     }
 
     addProduct(title, description, price, thumbnail, code, stock) {
@@ -27,6 +48,7 @@ class ProductManager {
 
         this.products.push(newProduct);
         this.idCounter++;
+        this.saveProductsToFile('products.json');
     }
 
     getProducts() {
@@ -45,26 +67,23 @@ class ProductManager {
 }
 
 const productsManager = new ProductManager();
+productsManager.loadProductsFromFile('products.json');
 
-
+//mostrara la array antes de agregarse el cupcake nuevo
 const emptyProducts = productsManager.getProducts();
 console.log(emptyProducts);
 
-
+//prueba de agregar un cupcake con un codigo ya existente (dira que esta repetido)
 productsManager.addProduct('Cupcake Vainilla', 'Rico cupcake sabor vainilla', 600, 'imagen1.jpg', 239, 15);
-productsManager.addProduct('Cupcake Chocolate', 'Descripción 2', 700, 'imagen2.jpg', 437, 10);
-productsManager.addProduct('Cupcake Red Velvet', 'Descripción 3', 800, 'imagen3.jpg', 593, 7);
 
-//En caso de que uno de los codigos de un cupcake este repetido, aplicara el if de la linea 8
-
+//prueba de agregar un cupcake nuevo directamente al archivo JSON (aparecera con la ID 6)
+productsManager.addProduct('Cupcake nuevo', 'Descripcion nueva', 850, 'imagenRandomNueva.jpg', 384, 10);
 
 const allProducts = productsManager.getProducts();
 console.log(allProducts);
 
-
 const productById = productsManager.getProductById(3);
 console.log(productById);
-
 
 const nonExistentProduct = productsManager.getProductById(10);
 console.log(nonExistentProduct);

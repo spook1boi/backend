@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Cupcake Vainilla",
+    "description": "El clasico sabor vainilla que nunca dejara de satisfacer los antojos dulces",
+    "price": 600,
+    "thumbnail": "imagen1.jpg",
+    "code": 239,
+    "stock": 15
+  },
+  {
+    "id": 2,
+    "title": "Cupcake Chocolate",
+    "description": "¡Una experiencia unica si eres amante del chocolate!",
+    "price": 700,
+    "thumbnail": "imagen2.jpg",
+    "code": 437,
+    "stock": 10
+  },
+  {
+    "id": 3,
+    "title": "Cupcake Red Velvet",
+    "description": "Junto con su distintivo color rojo, viene un sabor suave y dulce",
+    "price": 800,
+    "thumbnail": "imagen3.jpg",
+    "code": 593,
+    "stock": 7
+  },
+  {
+    "id": 4,
+    "title": "Cupcake de Frambuesa",
+    "description": "La fusion perfecta entre lo dulce y lo ligeramente acido, esponjoso y refrescante",
+    "price": 750,
+    "thumbnail": "imagen4.jpg",
+    "code": 754,
+    "stock": 12
+  },
+  {
+    "id": 5,
+    "title": "Cupcake de Limón",
+    "description": "Su frescura y acidez te dara una explosion de sabores unica",
+    "price": 650,
+    "thumbnail": "imagen5.jpg",
+    "code": 821,
+    "stock": 8
+  }
+]
