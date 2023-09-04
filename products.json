@@ -4,7 +4,7 @@
     "title": "Cupcake Vainilla",
     "description": "El clasico sabor vainilla que nunca dejara de satisfacer los antojos dulces",
     "price": 600,
-    "thumbnail": "imagen1.jpg",
+    "image": "imagen1.jpg",
     "code": 239,
     "stock": 15
   },
@@ -13,7 +13,7 @@
     "title": "Cupcake Chocolate",
     "description": "¡Una experiencia unica si eres amante del chocolate!",
     "price": 700,
-    "thumbnail": "imagen2.jpg",
+    "image": "imagen2.jpg",
     "code": 437,
     "stock": 10
   },
@@ -22,7 +22,7 @@
     "title": "Cupcake Red Velvet",
     "description": "Junto con su distintivo color rojo, viene un sabor suave y dulce",
     "price": 800,
-    "thumbnail": "imagen3.jpg",
+    "image": "imagen3.jpg",
     "code": 593,
     "stock": 7
   },
@@ -31,7 +31,7 @@
     "title": "Cupcake de Frambuesa",
     "description": "La fusion perfecta entre lo dulce y lo ligeramente acido, esponjoso y refrescante",
     "price": 750,
-    "thumbnail": "imagen4.jpg",
+    "image": "imagen4.jpg",
     "code": 754,
     "stock": 12
   },
@@ -40,8 +40,98 @@
     "title": "Cupcake de Limón",
     "description": "Su frescura y acidez te dara una explosion de sabores unica",
     "price": 650,
-    "thumbnail": "imagen5.jpg",
+    "image": "imagen5.jpg",
     "code": 821,
     "stock": 8
-  }
+  },
+  {
+    "id": 6,
+    "title": "Cupcake Nutella",
+    "description": "Un cupcake con crema de avellanas que es un auténtico placer",
+    "price": 680,
+    "image": "imagen6.jpg",
+    "code": 125,
+    "stock": 8
+  },
+  {
+    "id": 7,
+    "title": "Cupcake Arándano",
+    "description": "Un cupcake con arándanos frescos para los amantes de las frutas",
+    "price": 640,
+    "image": "imagen7.jpg",
+    "code": 245,
+    "stock": 14
+  },
+  {
+    "id": 8,
+    "title": "Cupcake Tiramisú",
+    "description": "Un cupcake con el sabor clásico del tiramisú italiano",
+    "price": 720,
+    "image": "imagen8.jpg",
+    "code": 894,
+    "stock": 9
+  },
+  {
+    "id": 9,
+    "title": "Cupcake Cookies and Cream",
+    "description": "Un cupcake con trozos de galleta y crema, ¡una delicia!",
+    "price": 670,
+    "image": "imagen9.jpg",
+    "code": 384,
+    "stock": 11
+  },
+  {
+    "id": 10,
+    "title": "Cupcake Caramelo Salado",
+    "description": "Un cupcake con un toque de caramelo y sal que es una delicia contrastante",
+    "price": 690,
+    "image": "imagen10.jpg",
+    "code": 378,
+    "stock": 13
+  },
+  {
+      "id": 11,
+      "title": "Cupcake Moka",
+      "description": "Un cupcake con un delicioso sabor a café moka y crema",
+      "price": 710,
+      "image": "imagen11.jpg",
+      "code": 950,
+      "stock": 16
+    },
+    {
+      "id": 12,
+      "title": "Cupcake Manzana Canela",
+      "description": "Un cupcake con trozos de manzana y un toque de canela",
+      "price": 660,
+      "image": "imagen12.jpg",
+      "code": 437,
+      "stock": 17
+    },
+    {
+      "id": 13,
+      "title": "Cupcake Frambuesa",
+      "description": "Un cupcake con un relleno de frambuesa fresca y glaseado de vainilla",
+      "price": 675,
+      "image": "imagen13.jpg",
+      "code": 312,
+      "stock": 10
+    },
+    {
+      "id": 14,
+      "title": "Cupcake Té Verde Matcha",
+      "description": "Un cupcake con un toque de té verde Matcha y crema de matcha",
+      "price": 730,
+      "image": "imagen14.jpg",
+      "code": 349,
+      "stock": 12
+    },
+  {
+      "id": 15,
+      "title": "Cupcake Fresa",
+      "description": "Un cupcake con un toque fresco de fresa que te encantará",
+      "price": 620,
+      "image": "imagen15.jpg",
+      "code": 231,
+      "stock": 18
+    }
 ]
